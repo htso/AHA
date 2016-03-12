@@ -11,8 +11,6 @@ To install directly from github, open a terminal, type R, then
 #Platforms
 Tested it on Linux (ubuntu 14.04). Should work on Windows and OS X.
 
-
-
 [1] Coates, Adam, Andrew Y. Ng, and Honglak Lee. "An analysis of single-layer networks in unsupervised feature learning." International conference on artificial intelligence and statistics. 2011.
 
 
