@@ -20,15 +20,18 @@ You need the following packages. To install from a terminal, type
 #Datasets
 In their paper, the algorithm is tested on three datasets : Cifar10, NORB, and STL. I provide the functions to download these datasets directly from the web. But beware that it may take a long time to download certain files, e.g. CIFAR10.
 
-I included a small subset of the CIFAR10. To load it, just type
+I include a toy dataset, which is small subset of CIFAR10. To load it, just type
 
     data(tinyCifar10)
 
 #Run
 I provide a demo in the /demo subfolder. To run it, 
 
+    setwd(system.file(package="AHA"))
     demo(runscript)
 
+#WARNING
+It may take a long time to finish a run, even on the toy dataset. 
 
 [1] Coates, Adam, Andrew Y. Ng, and Honglak Lee. "An analysis of single-layer networks in unsupervised feature learning." International conference on artificial intelligence and statistics. 2011.
 
