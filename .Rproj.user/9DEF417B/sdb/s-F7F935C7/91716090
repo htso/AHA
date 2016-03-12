@@ -1,0 +1,17 @@
+{
+    "contents" : "# getCifar.R -- download and format the three datasets mentioned in the paper\n\nfnm.gz = \"cifar-10-matlab.tar.gz\"\nfnm.tar = \"cifar-10-matlab.tar\"\nfnm = c(\"data_batch_1.mat\",\n        \"data_batch_2.mat\",\n        \"data_batch_3.mat\",\n        \"data_batch_4.mat\",\n        \"data_batch_5.mat\",\n        \"test_batch.mat\",\n        \"batches.meta.mat\")\n\ngetCifar10File = function(url, gz.nm, tar.nm, save_dir) {\n  require(R.utils)  \n  c.url = \"http://www.cs.toronto.edu/~kriz/cifar-10-matlab.tar.gz\"\n  #download.file( url, destfile=gz.nm, mode=\"wb\" )\n  gunzip(gz.nm)\n  ff = untar(tar.nm, list=TRUE)\n  untar(tar.nm, list=FALSE, exdir=save_dir)\n  #cvec = lapply(ff, function(ss)unlist(strsplit(ss, split=\"\\\\.\")))\n  #ix = which(sapply(cvec, function(v)length(unlist(v))) > 1)\n  ix = c(2,4,5,6,8,9)\n  dat = list()\n  for ( i in 1:length(ix) ) {  \n    dat[[i]] = readMat(con=ff[ix[i]])\n  }\n  return(dat)\n}\n\n\nreadCifar10 = function(save_dir) {\n  require(R.matlab)\n  require(R.utils)\n  matfiles = list.files(path=save_dir, pattern=\".mat\", full.names=TRUE)\n  meta = readMat(con=matfiles[1])\n  traindat = list(readMat(con=matfiles[2]),\n                  readMat(con=matfiles[3]),\n                  readMat(con=matfiles[4]),\n                  readMat(con=matfiles[5]),\n                  readMat(con=matfiles[6]))\n  testdat = readMat(con=matfiles[7])\n  return(list(train=traindat, test=testdat, meta=meta))\n}\n\n\n\n\n\n\n\n\n\n\n",
+    "created" : 1457667771651.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2869166589",
+    "id" : "91716090",
+    "lastKnownWriteTime" : 1457413493,
+    "path" : "~/RepulseBay/Rhome/CoatesHonglakNg/AHA/R/getCifar.R",
+    "project_path" : "R/getCifar.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
