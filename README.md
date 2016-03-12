@@ -17,6 +17,12 @@ You need the following packages. To install from a terminal, type
 
     install.packages("Rcpp", "LiblineaR", "pixmap", "R.matlab", "R.utils")
 
+#Datasets
+In their paper, the algorithm is tested on three datasets : Cifar10, NORB, and STL. I provide the functions to download these datasets directly from the web. But beware that it may take a long time to download certain files, e.g. CIFAR10.
+
+I included a small subset of the CIFAR10. To load it, just type
+
+    data(tinyCifar10)
 
 [1] Coates, Adam, Andrew Y. Ng, and Honglak Lee. "An analysis of single-layer networks in unsupervised feature learning." International conference on artificial intelligence and statistics. 2011.
 
