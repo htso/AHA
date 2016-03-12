@@ -24,6 +24,12 @@ I included a small subset of the CIFAR10. To load it, just type
 
     data(tinyCifar10)
 
+#Run
+I provide a demo in the /demo subfolder. To run it, 
+
+    demo(runscript)
+
+
 [1] Coates, Adam, Andrew Y. Ng, and Honglak Lee. "An analysis of single-layer networks in unsupervised feature learning." International conference on artificial intelligence and statistics. 2011.
 
 
