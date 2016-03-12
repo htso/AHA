@@ -9,9 +9,6 @@ To install directly from github, open a terminal, type R, then
 
     devtools::install_github('htso/AHA')
 
-#Platforms
-Tested it on Linux (ubuntu 14.04). Should work on Windows and OS X.
-
 #Dependencies
 You need the following packages. To install from a terminal, type 
 
@@ -32,6 +29,11 @@ I provide a demo in the /demo subfolder. To run it,
 
 #WARNING
 It may take a long time to finish a run, even on the toy dataset. 
+
+#Platforms
+Tested it on Linux (ubuntu 14.04) and Windows 7, should work on OS X.
+
+
 
 [1] Coates, Adam, Andrew Y. Ng, and Honglak Lee. "An analysis of single-layer networks in unsupervised feature learning." International conference on artificial intelligence and statistics. 2011.
 
