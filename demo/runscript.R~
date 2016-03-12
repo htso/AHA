@@ -3,7 +3,7 @@
 library(Rcpp)
 
 data(tinyCifar10)
-sourceCpp("Conv105.cpp")
+sourceCpp("inst/Conv105.cpp")
 
 w = 6
 stride = 1
